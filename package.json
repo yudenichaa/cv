@@ -1,6 +1,6 @@
 {
-  "name": "cra-template",
-  "version": "0.1.0",
+  "name": "cv",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@loadable/component": "^5.15.0",
@@ -8,14 +8,22 @@
     "axios": "^0.21.1",
     "classnames": "^2.3.1",
     "formik": "^2.2.9",
+    "i18next": "^20.4.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
+    "react-i18next": "^11.11.4",
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",
     "yup": "^0.32.9"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^6.3.7",
+    "@storybook/addon-essentials": "^6.3.7",
+    "@storybook/addon-links": "^6.3.7",
+    "@storybook/node-logger": "^6.3.7",
+    "@storybook/preset-create-react-app": "^3.2.0",
+    "@storybook/react": "^6.3.7",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -23,8 +31,8 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
-    "@types/react-router-dom": "^5.1.8",
     "@types/react-redux": "^7.1.18",
+    "@types/react-router-dom": "^5.1.8",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-promise": "^5.1.0",
     "husky": "^7.0.1",
@@ -32,6 +40,7 @@
     "node-sass": "^5.0.0",
     "prettier": "2.3.2",
     "react-scripts": "4.0.3",
+    "serve": "^12.0.0",
     "source-map-explorer": "^2.5.2",
     "stylelint": "^13.13.1",
     "stylelint-config-idiomatic-order": "^8.1.0",
@@ -42,9 +51,13 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "serve": "serve -s build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "component": "node cli.js component",
+    "sb": "start-storybook -p 6006 -s public",
+    "sb:build": "build-storybook -s public",
     "lint": "yarn run prettier; yarn run eslint; yarn run stylelint",
     "lint:fix": "yarn run prettier:fix; yarn run eslint:fix; yarn run stylelint:fix",
     "eslint": "eslint 'src/**/*.{ts,tsx,json}'",
@@ -52,8 +65,7 @@
     "prettier": "prettier --check 'src/**/*.{ts,tsx,json}'",
     "prettier:fix": "prettier --write 'src/**/*.{ts,tsx,json}'",
     "stylelint": "stylelint 'src/**/*.{sass,scss,css}'",
-    "stylelint:fix": "stylelint --fix 'src/**/*.{sass,scss,css}'",
-    "component": "node cli.js component"
+    "stylelint:fix": "stylelint --fix 'src/**/*.{sass,scss,css}'"
   },
   "eslintConfig": {
     "extends": [
@@ -61,6 +73,16 @@
       "react-app/jest",
       "plugin:promise/recommended",
       "prettier"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   },
   "husky": {
@@ -86,5 +108,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "resolutions": {
+    "babel-loader": "8.1.0"
   }
 }
