@@ -1,8 +1,6 @@
 import { Switch, Route } from 'react-router-dom';
 import { Home } from 'pages';
 
-import './App.scss';
-
 function App() {
   return (
     <Switch>
