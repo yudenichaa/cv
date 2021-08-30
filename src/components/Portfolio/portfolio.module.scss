@@ -1,0 +1,15 @@
+.portfolio {
+  padding: 32px 28px;
+
+  &__grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 450px);
+    gap: 28px 64px;
+  }
+
+  &__github {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}

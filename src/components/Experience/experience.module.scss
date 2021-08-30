@@ -1,0 +1,10 @@
+.experience {
+  padding: 32px 24px;
+
+  &__grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 450px);
+    gap: 28px 64px;
+  }
+}
