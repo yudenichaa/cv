@@ -1,10 +1,10 @@
 .education {
-  padding: 32px 24px;
+  padding: 32px 0;
 
   &__grid {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(2, 568px);
+    grid-template-columns: repeat(2, 524px);
     column-gap: 64px;
   }
 

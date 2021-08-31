@@ -1,0 +1,44 @@
+import GitHubIcon from 'assets/images/github.svg';
+import styles from './portfolio-item.module.scss';
+import cn from 'classnames/bind';
+
+const cl = cn.bind(styles);
+
+interface IPortfolioItem {
+  portfolioItem: {
+    name: string;
+    github?: string;
+    link: {
+      text: string;
+      url: string;
+    };
+    description: string;
+  };
+}
+
+export default function PortfolioItem({ portfolioItem }: IPortfolioItem) {
+  return (
+    <div key={portfolioItem.name}>
+      <div className="flex mb_12">
+        <h4 className={portfolioItem.github && 'mr_12'}>
+          {portfolioItem.name}
+        </h4>
+        {portfolioItem.github && (
+          <a href={portfolioItem.github} target="_blank" rel="noreferrer">
+            <img
+              src={GitHubIcon}
+              alt="GitHub"
+              className={cl('portfolio-item__github')}
+            />
+          </a>
+        )}
+      </div>
+      <p className="mb_12">
+        <a href={portfolioItem.link.url} target="_blank" rel="noreferrer">
+          {portfolioItem.link.text}
+        </a>
+      </p>
+      <p>{portfolioItem.description}</p>
+    </div>
+  );
+}

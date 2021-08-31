@@ -1,5 +1,8 @@
 import { Component, ErrorInfo, ReactNode } from 'react';
 import styles from './error-boundary.module.scss';
+import cn from 'classnames/bind';
+
+const cl = cn.bind(styles);
 
 interface Props {
   children: ReactNode;
@@ -23,8 +26,8 @@ export default class ErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.error) {
       return (
-        <div className={styles['error-boundary']}>
-          <h1 className={styles['error-boundary__text']}>
+        <div className={cl('error-boundary')}>
+          <h1 className={cl('error-boundary__text')}>
             Something went wrong. Try reloading the page.
           </h1>
         </div>

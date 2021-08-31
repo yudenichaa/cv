@@ -1,0 +1,32 @@
+header,
+footer {
+  min-height: 68px;
+  background-color: #f7fafc;
+}
+
+.home {
+  &__content-item {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  &__intro-background {
+    background-color: #fff;
+  }
+
+  &__skills-background {
+    background-color: #f8f8f8;
+  }
+
+  &__education-background {
+    background-color: #fff;
+  }
+
+  &__experience-background {
+    background-color: #f8f8f8;
+  }
+
+  &__portfolio-background {
+    background-color: #fff;
+  }
+}
