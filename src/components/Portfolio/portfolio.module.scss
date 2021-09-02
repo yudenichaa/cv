@@ -1,10 +1,20 @@
 .portfolio {
   padding: 32px 0;
 
+  &__h3 {
+    @media (min-width: 1144px) {
+      margin-left: 24px;
+    }
+  }
+
   &__grid {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(2, 450px);
     gap: 28px 64px;
+    grid-template-columns: minmax(0, 450px);
+
+    @media (min-width: 968px) {
+      grid-template-columns: repeat(2, minmax(0, 450px));
+    }
   }
 }

@@ -4,7 +4,10 @@
   &__grid {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(2, 450px);
     gap: 28px 64px;
+
+    @media (min-width: 1224px) {
+      grid-template-columns: repeat(2, 450px);
+    }
   }
 }

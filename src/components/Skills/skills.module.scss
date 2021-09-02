@@ -1,20 +1,25 @@
 .skills {
   padding: 32px 0;
 
-  &__container {
-    display: flex;
-    justify-content: center;
-  }
-
   &__column {
     &:not(:last-child) {
       margin-right: 32px;
     }
   }
 
-  &__skill {
+  &__column-skill {
     &:not(:last-child) {
       margin-bottom: 16px;
     }
+  }
+
+  &__row {
+    line-height: 2;
+  }
+
+  &__row-skill {
+    display: inline-block;
+    padding: 0 8px;
+    border-radius: 8px;
   }
 }

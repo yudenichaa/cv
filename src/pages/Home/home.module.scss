@@ -10,23 +10,26 @@ footer {
     margin: auto;
   }
 
-  &__intro-background {
+  &__intro-container,
+  &__education-container,
+  &__portfolio-container,
+  &__skills-container,
+  &__experience-container {
+    padding: 0 24px;
+
+    @media (min-width: 1276px) {
+      padding: 0;
+    }
+  }
+
+  &__intro-container,
+  &__experience-container,
+  &__education-container {
     background-color: #fff;
   }
 
-  &__skills-background {
-    background-color: #f8f8f8;
-  }
-
-  &__education-background {
-    background-color: #fff;
-  }
-
-  &__experience-background {
-    background-color: #f8f8f8;
-  }
-
-  &__portfolio-background {
-    background-color: #fff;
+  &__skills-container,
+  &__portfolio-container {
+    background-color: #f7fafc;
   }
 }
