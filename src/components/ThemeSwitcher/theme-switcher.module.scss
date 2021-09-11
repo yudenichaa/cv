@@ -1,0 +1,19 @@
+.theme-switcher {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background-color: transparent;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  &_dark {
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+      // background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
+}

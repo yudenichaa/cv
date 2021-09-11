@@ -6,8 +6,8 @@
     justify-content: center;
     gap: 28px 64px;
 
-    @media (min-width: 1224px) {
-      grid-template-columns: repeat(2, 450px);
+    @media (min-width: 968px) {
+      grid-template-columns: repeat(2, minmax(0, 450px));
     }
   }
 }

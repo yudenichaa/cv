@@ -1,0 +1,33 @@
+.header {
+  background-color: #f7fafc;
+  padding: 16px 0;
+
+  &__content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding: 0 24px;
+
+    @media (min-width: 724px) {
+      justify-content: space-between;
+    }
+
+    @media (min-width: 1276px) {
+      padding: 0;
+    }
+  }
+
+  &__controls {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    column-gap: 32px;
+  }
+
+  &__contacts {
+    display: none;
+    @media (min-width: 724px) {
+      display: block;
+    }
+  }
+}

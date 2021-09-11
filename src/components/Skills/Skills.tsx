@@ -25,15 +25,13 @@ export default function Skills() {
         </div>
       ) : (
         <p className={cl('skills__row')}>
-          {Object.values(skills).map((columnSkills) => (
-            <>
-              {columnSkills.map((skill) => (
-                <span key={skill} className={cl('skills__row-skill')}>
-                  {skill}
-                </span>
-              ))}
-            </>
-          ))}
+          {Object.values(skills).map((columnSkills) =>
+            columnSkills.map((skill) => (
+              <span key={skill} className={cl('skills__row-skill')}>
+                {skill}
+              </span>
+            ))
+          )}
         </p>
       )}
     </section>

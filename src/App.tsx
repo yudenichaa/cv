@@ -4,9 +4,10 @@ import { Home } from 'pages';
 function App() {
   return (
     <Switch>
-      <Route path="/">
+      <Route exact path="/">
         <Home />
       </Route>
+      <Route path="/contact">Write me</Route>
     </Switch>
   );
 }

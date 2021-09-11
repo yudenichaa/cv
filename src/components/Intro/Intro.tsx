@@ -1,3 +1,4 @@
+import { Contacts } from 'components';
 import styles from './intro.module.scss';
 import cn from 'classnames/bind';
 
@@ -13,6 +14,9 @@ export default function Intro() {
           Лайтхаус
         </a>
       </h2>
+      <div className={cl('intro__contacts')}>
+        <Contacts />
+      </div>
     </section>
   );
 }

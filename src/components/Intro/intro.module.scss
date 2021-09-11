@@ -4,7 +4,18 @@
 
   &__title {
     @media (max-width: 576px) {
-      margin-bottom: 8px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+
+    @media (min-width: 724px) {
+      margin-top: 0;
+      display: none;
     }
   }
 }

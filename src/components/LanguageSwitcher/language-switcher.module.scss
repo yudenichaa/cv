@@ -1,0 +1,44 @@
+.language-switcher {
+  display: flex;
+  align-items: center;
+
+  &__select-container {
+    position: relative;
+  }
+
+  &__select {
+    display: flex;
+    align-items: center;
+    padding: 5px 14px;
+    background-color: #e2e5e7;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+
+  &__select-list {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    width: 100%;
+    background-color: #e2e5e7;
+    border-radius: 15px;
+    text-align: center;
+  }
+
+  &__select-list-item {
+    padding: 8px 0;
+    cursor: pointer;
+    &:not(:last-child) {
+      border-bottom: 1px solid #ffffff;
+    }
+  }
+
+  &__language-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  &__chevron-icon {
+    margin-left: 8px;
+  }
+}

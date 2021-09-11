@@ -1,4 +1,12 @@
-import { Intro, Skills, Education, Experience, Portfolio } from 'components';
+import {
+  Intro,
+  Skills,
+  Education,
+  Experience,
+  Portfolio,
+  Contacts,
+  Header,
+} from 'components';
 import styles from './home.module.scss';
 import cn from 'classnames/bind';
 
@@ -7,7 +15,7 @@ const cl = cn.bind(styles);
 export default function Home() {
   return (
     <div>
-      <header></header>
+      <Header />
       <main>
         <div className={cl('home__intro-container')}>
           <div className={cl('home__content-item')}>
@@ -35,7 +43,9 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <footer></footer>
+      <footer className={cl('home__footer')}>
+        <Contacts />
+      </footer>
     </div>
   );
 }
