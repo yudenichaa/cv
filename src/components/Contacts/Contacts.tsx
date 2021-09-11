@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import styles from './contacts.module.scss';
 import cn from 'classnames/bind';
 import githubIcon from 'assets/images/github.svg';
@@ -7,10 +6,17 @@ import linkedinIcon from 'assets/images/linkedin.svg';
 import hashnodeIcon from 'assets/images/hashnode.svg';
 import habrIcon from 'assets/images/habr.png';
 import pencilIcon from 'assets/images/pencil.svg';
+import { useState, useCallback } from 'react';
+import { Modal } from 'components';
 
 const cl = cn.bind(styles);
 
 export default function Contacts() {
+  const [contactModalOpen, setContactModalOpen] = useState(false);
+
+  const openContactModal = useCallback(() => setContactModalOpen(true), []);
+  const closeContactModal = useCallback(() => setContactModalOpen(false), []);
+
   return (
     <section className={cl('contacts')}>
       <ul className={cl('contacts__list')}>
@@ -80,14 +86,25 @@ export default function Contacts() {
           </a>
         </li>
       </ul>
-      <Link to="/contact" className={cl('contacts__contact-link')}>
+      <button
+        onClick={openContactModal}
+        className={cl('contacts__contact-button')}
+      >
         <img
-          className={cn(cl('contacts__contact-link-icon'), 'mr_8')}
+          className={cn(cl('contacts__contact-button-icon'), 'mr_8')}
           src={pencilIcon}
           alt="Написать"
         />
         Написать
-      </Link>
+      </button>
+      <Modal open={contactModalOpen} onClose={closeContactModal}>
+        <form className={cl('contacts__form')}>
+          <textarea className={cl('contacts__message-input')} />
+          <button className={cl('contacts__send-button')} type="submit">
+            Отправить
+          </button>
+        </form>
+      </Modal>
     </section>
   );
 }

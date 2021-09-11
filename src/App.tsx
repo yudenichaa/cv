@@ -7,7 +7,6 @@ function App() {
       <Route exact path="/">
         <Home />
       </Route>
-      <Route path="/contact">Write me</Route>
     </Switch>
   );
 }
