@@ -1,13 +1,9 @@
 import styles from './contacts.module.scss';
 import cn from 'classnames/bind';
-import githubIcon from 'assets/images/github.svg';
-import telegramIcon from 'assets/images/telegram.svg';
-import linkedinIcon from 'assets/images/linkedin.svg';
-import hashnodeIcon from 'assets/images/hashnode.svg';
-import habrIcon from 'assets/images/habr.png';
 import pencilIcon from 'assets/images/pencil.svg';
 import { useState, useCallback } from 'react';
 import { Modal } from 'components';
+import contacts from './data';
 
 const cl = cn.bind(styles);
 
@@ -20,71 +16,22 @@ export default function Contacts() {
   return (
     <section className={cl('contacts')}>
       <ul className={cl('contacts__list')}>
-        <li className={cl('contacts__list-item')}>
-          <a
-            className={cl('contacts__list-link')}
-            href="https://github.com/yudenichaa"
-            rel="noreferrer"
-          >
-            <img
-              className={cl('contacts__list-icon')}
-              src={githubIcon}
-              alt="GitHub"
-            />
-          </a>
-        </li>
-        <li className={cl('contacts__list-item')}>
-          <a
-            className={cl('contacts__list-link')}
-            href="https://t.me/yudenichaa"
-            rel="noreferrer"
-          >
-            <img
-              className={cl('contacts__list-icon')}
-              src={telegramIcon}
-              alt="Telegram"
-            />
-          </a>
-        </li>
-        <li className={cl('contacts__list-item')}>
-          <a
-            className={cl('contacts__list-link')}
-            href="https://www.linkedin.com/in/alexandr-yudenich-b93299205/"
-            rel="noreferrer"
-          >
-            <img
-              className={cl('contacts__list-icon')}
-              src={linkedinIcon}
-              alt="LinkedIn"
-            />
-          </a>
-        </li>
-        <li className={cl('contacts__list-item')}>
-          <a
-            className={cl('contacts__list-link')}
-            href="https://nightzen.dev/"
-            rel="noreferrer"
-          >
-            <img
-              className={cl('contacts__list-icon')}
-              src={hashnodeIcon}
-              alt="Hashnode"
-            />
-          </a>
-        </li>
-        <li className={cl('contacts__list-item')}>
-          <a
-            className={cl('contacts__list-link')}
-            href="https://habr.com/ru/users/nightzen/"
-            rel="noreferrer"
-          >
-            <img
-              className={cl('contacts__list-icon')}
-              src={habrIcon}
-              alt="Хабр"
-            />
-          </a>
-        </li>
+        {contacts.map((contact) => (
+          <li key={contact.name} className={cl('contacts__list-item')}>
+            <a
+              className={cl('contacts__list-link')}
+              href={contact.link}
+              rel="noreferrer"
+              target="_blank"
+            >
+              <img
+                className={cl('contacts__list-icon')}
+                src={contact.image}
+                alt={contact.name}
+              />
+            </a>
+          </li>
+        ))}
       </ul>
       <button
         onClick={openContactModal}

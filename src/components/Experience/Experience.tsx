@@ -7,7 +7,7 @@ const cl = cn.bind(styles);
 export default function Experience() {
   return (
     <section className={cl('experience')}>
-      <h2 className="mb_28">Опыт работы</h2>
+      <h2 className="mb_28">Опыт</h2>
       <div className={cl('experience__grid')}>
         {experience.map((experienceItem) => (
           <div key={experienceItem.company}>

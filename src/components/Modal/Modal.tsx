@@ -20,7 +20,7 @@ export default function Modal({ open, onClose, children }: IModal) {
       <div className={cl('modal__content')}>{children}</div>
       <button
         type="button"
-        aria-label="Закрыть форму для отправки сообщения"
+        aria-label="Закрыть модальное окно"
         onClick={onClose}
         className={cl('modal__close-button')}
       >
@@ -28,7 +28,7 @@ export default function Modal({ open, onClose, children }: IModal) {
       </button>
       <div
         role="button"
-        aria-label="Закрыть форму для отправки сообщения"
+        aria-label="Закрыть модальное окно"
         onClick={onClose}
         tabIndex={0}
         className={cl('modal__background')}

@@ -21,6 +21,9 @@ export default function LanguageSwitcher() {
           <p>Русский</p>
           <img
             className={cl('language-switcher__chevron-icon')}
+            style={{
+              transform: `rotate(${open ? '180' : '0'}deg)`,
+            }}
             src={ChevronIcon}
             alt="Список языков"
           />
