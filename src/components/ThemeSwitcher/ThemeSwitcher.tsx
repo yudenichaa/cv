@@ -13,7 +13,7 @@ export default function ThemeSwitcher() {
     <button
       type="button"
       aria-label="Переключатель темы"
-      className={cl('theme-switcher', isDarkTheme && 'theme-switcher_dark')}
+      className={cl('theme-switcher')}
       onClick={toggleTheme}
     >
       {isDarkTheme ? <SunIcon /> : <MoonIcon />}
