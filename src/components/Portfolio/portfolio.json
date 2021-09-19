@@ -40,8 +40,8 @@
       "name": "Трекер Covid-19",
       "github": "https://github.com/yudenichaa/covid-tracker",
       "link": {
-        "text": "chat-rooms.yudenichaa.vercel.app",
-        "url": "https://chat-rooms.yudenichaa.vercel.app"
+        "text": "covid-tracker.yudenichaa.vercel.app",
+        "url": "https://covid-tracker.yudenichaa.vercel.app"
       },
       "description": "Отслеживание количества заболевших, выздоровевших и смертельных исходов. Данные представлены в виде таблицы, графика и карты. Просмотр статистики доступен для определённой страны или по всему миру."
     },

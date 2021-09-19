@@ -26,17 +26,17 @@ export const useDarkTheme = (): [boolean, () => void] => {
     if (theme) {
       if (theme === 'dark') {
         setDarkTheme(true);
-        document.getElementById('root')?.classList.add('dark-theme');
+        document.body.classList.add('dark-theme');
       } else {
         setDarkTheme(false);
-        document.getElementById('root')?.classList.remove('dark-theme');
+        document.body.classList.remove('dark-theme');
       }
     } else if (prefersDarkColorScheme) {
       setDarkTheme(true);
-      document.getElementById('root')?.classList.add('dark-theme');
+      document.body.classList.add('dark-theme');
     } else {
       setDarkTheme(false);
-      document.getElementById('root')?.classList.remove('dark-theme');
+      document.body.classList.remove('dark-theme');
     }
   }, [prefersDarkColorScheme]);
 
@@ -44,9 +44,9 @@ export const useDarkTheme = (): [boolean, () => void] => {
     setDarkTheme((darkTheme) => {
       localStorage.setItem('theme', darkTheme ? 'light' : 'dark');
       if (darkTheme) {
-        document.getElementById('root')?.classList.remove('dark-theme');
+        document.body.classList.remove('dark-theme');
       } else {
-        document.getElementById('root')?.classList.add('dark-theme');
+        document.body.classList.add('dark-theme');
       }
       return !darkTheme;
     });

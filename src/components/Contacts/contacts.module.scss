@@ -1,29 +1,20 @@
 .contacts {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @media (min-width: 576px) {
-    flex-direction: row;
-    align-items: center;
-  }
+  height: 100%;
 
   &__list {
-    display: grid;
-    grid-auto-flow: column;
-    column-gap: 16px;
+    display: flex;
+    align-items: center;
     list-style-type: none;
-    margin-bottom: 16px;
-
-    @media (min-width: 576px) {
-      margin-bottom: 0;
-      margin-right: 16px;
-    }
   }
 
   &__list-item {
     display: flex;
     align-items: center;
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
   }
 
   &__list-link {
@@ -33,44 +24,5 @@
   &__list-icon {
     width: 30px;
     height: 30px;
-  }
-
-  &__contact-button {
-    border: 0;
-    display: flex;
-    align-items: center;
-    background-color: #108cff;
-    color: #ffffff;
-    padding: 10px;
-    border-radius: 15px;
-    cursor: pointer;
-    font-size: 1rem;
-
-    @media (min-width: 576px) {
-      font-size: 1.125rem;
-    }
-  }
-
-  &__contact-button-icon {
-    width: 20px;
-    height: 20px;
-  }
-
-  &__form {
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    padding: 24px;
-    width: 468px;
-    max-width: calc(100vw - 48px);
-  }
-
-  &__message-input {
-    margin-bottom: 24px;
-    height: 270px;
-    resize: none;
-  }
-
-  &__send-button {
   }
 }
