@@ -22,6 +22,7 @@
     display: inline-grid;
     grid-template-columns: auto auto;
     column-gap: 32px;
+    align-content: center;
   }
 
   &__contacts {
@@ -30,4 +31,8 @@
       display: block;
     }
   }
+}
+
+:global .dark-theme :local .header {
+  background-color: #2d333b;
 }

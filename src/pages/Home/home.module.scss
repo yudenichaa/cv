@@ -1,8 +1,4 @@
 .home {
-  &__footer {
-    background-color: #f7fafc;
-  }
-
   &__content-item {
     max-width: 1200px;
     margin: auto;
@@ -36,5 +32,19 @@
     padding: 16px 0;
     display: flex;
     justify-content: center;
+  }
+}
+
+:global .dark-theme :local .home {
+  &__intro-container,
+  &__experience-container,
+  &__education-container {
+    background-color: #22272e;
+  }
+
+  &__skills-container,
+  &__portfolio-container,
+  &__footer {
+    background-color: #2d333b;
   }
 }

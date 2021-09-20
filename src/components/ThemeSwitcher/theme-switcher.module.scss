@@ -13,7 +13,6 @@
 
 :global .dark-theme :local .theme-switcher {
   &:hover {
-    background-color: rgba(206, 18, 18, 0.1);
-    // background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
   }
 }

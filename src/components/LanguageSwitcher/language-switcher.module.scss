@@ -13,6 +13,10 @@
     background-color: #e2e5e7;
     border-radius: 15px;
     cursor: pointer;
+
+    &:hover {
+      background-color: #d8dee0;
+    }
   }
 
   &__select-list {
@@ -23,6 +27,7 @@
     background-color: #e2e5e7;
     border-radius: 15px;
     text-align: center;
+    overflow: hidden;
   }
 
   &__select-list-item {
@@ -30,6 +35,10 @@
     cursor: pointer;
     &:not(:last-child) {
       border-bottom: 1px solid #ffffff;
+    }
+
+    &:hover {
+      background-color: #d8dee0;
     }
   }
 
@@ -40,5 +49,38 @@
 
   &__chevron-icon {
     margin-left: 8px;
+  }
+}
+
+:global .dark-theme :local .language-switcher {
+  color: #fff;
+
+  &__select {
+    &:hover {
+      background-color: #04080f;
+    }
+  }
+
+  &__select,
+  &__select-list {
+    background-color: #161b22;
+  }
+
+  &__select-list-item {
+    &:hover {
+      background-color: #04080f;
+    }
+
+    &:not(:last-child) {
+      border-bottom-color: #b9b9b9;
+    }
+  }
+
+  &__chevron-icon {
+    filter: invert(1);
+  }
+
+  &__language-icon {
+    filter: invert(1);
   }
 }
