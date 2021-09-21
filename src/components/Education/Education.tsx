@@ -6,7 +6,9 @@ const cl = cn.bind(styles);
 export default function Education() {
   return (
     <section className={cl('education')}>
-      <h2 className="mb_28">Образование</h2>
+      <h2 tabIndex={0} className="mb_28">
+        Образование
+      </h2>
       <div className={cl('education__grid')}>
         <div>
           <h3 className="mb_16">

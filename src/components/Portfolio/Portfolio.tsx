@@ -8,7 +8,9 @@ const cl = cn.bind(styles);
 export default function Portfolio() {
   return (
     <section className={cl('portfolio')}>
-      <h2 className="mb_28">Портфолио</h2>
+      <h2 tabIndex={0} className="mb_28">
+        Портфолио
+      </h2>
       <h3 className={cn(cl('portfolio__h3'), 'mb_28')}>Коммерческие проекты</h3>
       <div className={cn(cl('portfolio__grid'), 'mb_28')}>
         {portfolio.commercial.map((portfolioItem) => (

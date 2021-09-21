@@ -10,7 +10,9 @@ export default function Skills() {
 
   return (
     <section className={cl('skills')}>
-      <h2 className="mb_28">Навыки</h2>
+      <h2 tabIndex={0} className="mb_28">
+        Навыки
+      </h2>
       {isDesktopScreen ? (
         <div className="flex justify-center">
           {Object.entries(skills).map(([columnName, columnSkills]) => (

@@ -9,12 +9,19 @@ import {
 } from 'components';
 import styles from './home.module.scss';
 import cn from 'classnames/bind';
+import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 
 const cl = cn.bind(styles);
 
 export default function Home() {
+  const { t } = useTranslation();
+
   return (
     <div>
+      <Helmet>
+        <title>{t('title')}</title>
+      </Helmet>
       <Header />
       <main>
         <div className={cl('home__intro-container')}>

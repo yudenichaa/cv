@@ -1,12 +1,10 @@
 .language-switcher {
   display: flex;
   align-items: center;
-
-  &__select-container {
-    position: relative;
-  }
+  user-select: none;
 
   &__select {
+    position: relative;
     display: flex;
     align-items: center;
     padding: 5px 14px;
@@ -24,15 +22,25 @@
     top: calc(100% + 4px);
     left: 0;
     width: 100%;
-    background-color: #e2e5e7;
-    border-radius: 15px;
     text-align: center;
-    overflow: hidden;
   }
 
   &__select-list-item {
     padding: 8px 0;
     cursor: pointer;
+    overflow: hidden;
+    background-color: #e2e5e7;
+
+    &:first-child {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+
     &:not(:last-child) {
       border-bottom: 1px solid #ffffff;
     }
@@ -61,12 +69,12 @@
     }
   }
 
-  &__select,
-  &__select-list {
+  &__select {
     background-color: #161b22;
   }
 
   &__select-list-item {
+    background-color: #161b22;
     &:hover {
       background-color: #04080f;
     }
