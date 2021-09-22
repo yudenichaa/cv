@@ -2,11 +2,25 @@ import styles from './language-switcher.module.scss';
 import cn from 'classnames/bind';
 import LanguageIcon from 'assets/images/language.svg';
 import ChevronIcon from 'assets/images/chevron.svg';
-import React, { useState, useCallback, useRef } from 'react';
+import React, { useState, useCallback, useRef, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useHistory } from 'react-router';
 
 const cl = cn.bind(styles);
 
+interface ILanguageOptions {
+  [key: string]: string;
+}
+
+const languageOptions: ILanguageOptions = {
+  ru: 'Русский',
+  en: 'English',
+};
+
 export default function LanguageSwitcher() {
+  const history = useHistory();
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language;
   const [open, setOpen] = useState(false);
   const collapseSwitcherTimerID = useRef<number>();
 
@@ -31,6 +45,38 @@ export default function LanguageSwitcher() {
     }
   }, []);
 
+  const onLanguageChange = useCallback(
+    (languageCode: string) => {
+      const path = history.location.pathname;
+      const indexOfSecondSlash = path.indexOf('/', 1);
+      if (indexOfSecondSlash === -1) {
+        history.replace(languageCode + path);
+      } else {
+        history.replace(
+          languageCode + '/' + path.slice(indexOfSecondSlash + 1)
+        );
+      }
+      i18n.changeLanguage(languageCode);
+    },
+    [history, i18n]
+  );
+
+  const options = useMemo(() => {
+    return Object.entries(languageOptions).map(
+      ([languageCode, languageName]) => (
+        <div
+          tabIndex={0}
+          role="option"
+          onClick={() => onLanguageChange(languageCode)}
+          aria-selected={currentLanguage === languageCode ? 'true' : 'false'}
+          className={cl('language-switcher__select-list-item')}
+        >
+          <p>{languageName}</p>
+        </div>
+      )
+    );
+  }, [currentLanguage, onLanguageChange]);
+
   return (
     <div className={cl('language-switcher')}>
       <div
@@ -42,7 +88,7 @@ export default function LanguageSwitcher() {
         role="listbox"
         className={cn(cl('language-switcher__select'), 'mr_8')}
       >
-        <p>Русский</p>
+        <p>{languageOptions[i18n.language] || languageOptions['en']}</p>
         <img
           className={cl('language-switcher__chevron-icon')}
           style={{
@@ -57,23 +103,7 @@ export default function LanguageSwitcher() {
           }}
           className={cl('language-switcher__select-list')}
         >
-          <div
-            tabIndex={0}
-            role="option"
-            // change
-            aria-selected="false"
-            className={cl('language-switcher__select-list-item')}
-          >
-            <p>English</p>
-          </div>
-          <div
-            tabIndex={0}
-            // change
-            aria-selected="true"
-            className={cl('language-switcher__select-list-item')}
-          >
-            <p>Русский</p>
-          </div>
+          {options}
         </div>
       </div>
       <img
