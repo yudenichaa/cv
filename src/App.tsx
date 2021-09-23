@@ -1,15 +1,18 @@
-import { Home } from 'pages';
 import { useDarkTheme } from 'hooks';
 import ThemeContext from 'contexts/theme';
-import { Suspense } from 'react';
+import { PageLoadingIndicator } from 'components';
+import { Suspense, lazy } from 'react';
+import pMinDelay from 'p-min-delay';
+
+const HomePage = lazy(() => pMinDelay(import('./pages/Home'), 500));
 
 function App() {
   const [isDarkTheme, toggleTheme] = useDarkTheme();
 
   return (
     <ThemeContext.Provider value={{ isDarkTheme, toggleTheme }}>
-      <Suspense fallback="loading">
-        <Home />
+      <Suspense fallback={<PageLoadingIndicator />}>
+        <HomePage />
       </Suspense>
     </ThemeContext.Provider>
   );

@@ -17,6 +17,8 @@ const languageOptions: ILanguageOptions = {
   en: 'English',
 };
 
+// aria-selected not correct
+
 export default function LanguageSwitcher() {
   const history = useHistory();
   const { i18n } = useTranslation();
@@ -47,15 +49,15 @@ export default function LanguageSwitcher() {
 
   const onLanguageChange = useCallback(
     (languageCode: string) => {
-      const path = history.location.pathname;
-      const indexOfSecondSlash = path.indexOf('/', 1);
-      if (indexOfSecondSlash === -1) {
-        history.replace(languageCode + path);
-      } else {
-        history.replace(
-          languageCode + '/' + path.slice(indexOfSecondSlash + 1)
-        );
-      }
+      // const path = history.location.pathname;
+      // const indexOfSecondSlash = path.indexOf('/', 1);
+      // if (indexOfSecondSlash === -1) {
+      //   history.replace(languageCode + path);
+      // } else {
+      //   history.replace(
+      //     languageCode + '/' + path.slice(indexOfSecondSlash + 1)
+      //   );
+      // }
       i18n.changeLanguage(languageCode);
     },
     [history, i18n]
