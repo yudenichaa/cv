@@ -49,16 +49,27 @@ export default function LanguageSwitcher() {
 
   const onLanguageChange = useCallback(
     (languageCode: string) => {
-      // const path = history.location.pathname;
-      // const indexOfSecondSlash = path.indexOf('/', 1);
-      // if (indexOfSecondSlash === -1) {
-      //   history.replace(languageCode + path);
-      // } else {
-      //   history.replace(
-      //     languageCode + '/' + path.slice(indexOfSecondSlash + 1)
-      //   );
-      // }
-      i18n.changeLanguage(languageCode);
+      if (languageCode !== i18n.language) {
+        const path = history.location.pathname;
+        const indexOfSecondSlash = path.indexOf('/', 1);
+        if (indexOfSecondSlash === -1) {
+          const languagePart = path.slice(1);
+          if (languagePart in languageOptions) {
+            history.replace('/' + languageCode);
+          } else {
+            history.replace('/' + languageCode + path);
+          }
+        } else {
+          const languagePart = path.slice(1, indexOfSecondSlash);
+          if (languagePart in languageOptions) {
+            const pathWithoutLanguage = path.slice(indexOfSecondSlash + 1);
+            history.replace('/' + languageCode + '/' + pathWithoutLanguage);
+          } else {
+            history.replace('/' + languageCode + path);
+          }
+        }
+        i18n.changeLanguage(languageCode);
+      }
     },
     [history, i18n]
   );
@@ -67,6 +78,7 @@ export default function LanguageSwitcher() {
     return Object.entries(languageOptions).map(
       ([languageCode, languageName]) => (
         <div
+          key={languageCode}
           tabIndex={0}
           role="option"
           onClick={() => onLanguageChange(languageCode)}

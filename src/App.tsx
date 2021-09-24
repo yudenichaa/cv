@@ -4,7 +4,7 @@ import { PageLoadingIndicator } from 'components';
 import { Suspense, lazy } from 'react';
 import pMinDelay from 'p-min-delay';
 
-const HomePage = lazy(() => pMinDelay(import('./pages/Home'), 500));
+const HomePage = lazy(() => pMinDelay(import('./pages/Home'), 600));
 
 function App() {
   const [isDarkTheme, toggleTheme] = useDarkTheme();
