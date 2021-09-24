@@ -10,11 +10,11 @@ export default function Intro() {
 
   return (
     <section className={cl('intro')}>
-      <h1 className={cl('intro__title')}>{t('name')}</h1>
+      <h1 className={cl('intro__title')}>{t('intro.name')}</h1>
       <h2 className="small">
-        Фронтенд разработчик в{' '}
+        {t('intro.profession')}{' '}
         <a href="https://www.cfa.digital" target="_blank" rel="noreferrer">
-          Лайтхаус
+          {t('intro.company')}
         </a>
       </h2>
       <div className={cl('intro__contacts')}>

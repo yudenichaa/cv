@@ -1,4 +1,8 @@
 {
   "title": "Alexandr Yudenich — Frontend developer",
-  "name": "Alexandr Yudenich"
+  "intro": {
+    "name": "Alexandr Yudenich",
+    "profession": "Frontend developer at",
+    "company": "Lighthouse"
+  }
 }
