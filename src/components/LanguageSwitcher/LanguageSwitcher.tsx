@@ -5,24 +5,14 @@ import ChevronIcon from 'assets/images/chevron.svg';
 import React, { useState, useCallback, useRef, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useHistory } from 'react-router';
+import { languageOptions } from 'config';
 
 const cl = cn.bind(styles);
-
-interface ILanguageOptions {
-  [key: string]: string;
-}
-
-const languageOptions: ILanguageOptions = {
-  ru: 'Русский',
-  en: 'English',
-};
-
-// aria-selected not correct
 
 export default function LanguageSwitcher() {
   const history = useHistory();
   const { i18n } = useTranslation();
-  const currentLanguage = i18n.language;
+  const currentLanguage = i18n.resolvedLanguage;
   const [open, setOpen] = useState(false);
   const collapseSwitcherTimerID = useRef<number>();
 
