@@ -6,13 +6,13 @@ import { useTranslation, Trans } from 'react-i18next';
 const cl = cn.bind(styles);
 
 export default function Intro() {
-  const { t } = useTranslation();
+  const { t } = useTranslation('home', { keyPrefix: 'intro' });
 
   return (
     <div className={cl('intro')}>
-      <h1 className={cl('intro__title')}>{t('intro.name')}</h1>
+      <h1 className={cl('intro__title')}>{t('name')}</h1>
       <h2 className="small">
-        <Trans i18nKey="intro.profession">
+        <Trans t={t} i18nKey="profession">
           Frontend developer at{' '}
           <a href="https://www.cfa.digital" target="_blank" rel="noreferrer">
             Lighthouse

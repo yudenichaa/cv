@@ -10,6 +10,13 @@
   "ui": {
     "modal": {
       "close": "Закрыть модальное окно"
+    },
+    "themeSwitcher": {
+      "label": "Переключатель темы"
+    },
+    "languageSwitcher": {
+      "languagesList": "Список языков",
+      "languageSelection": "Выбор языка"
     }
   }
 }

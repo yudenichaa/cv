@@ -27,7 +27,7 @@ const contacts = [
   },
   {
     name: 'Habr',
-    link: 'https://habr.com/ru/users/nightzen/',
+    link: 'https://habr.com/users/nightzen/',
     image: habrIcon,
   },
 ];

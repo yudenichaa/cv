@@ -12,7 +12,7 @@ const HomePage = lazy(() => pMinDelay(import('./pages/Home'), 600));
 function App() {
   const [isDarkTheme, toggleTheme] = useDarkTheme();
   const { i18n } = useTranslation();
-  const languageCode = i18n.resolvedLanguage;
+  const languageCode = i18n.languages[0];
   const history = useHistory();
 
   useEffect(() => {

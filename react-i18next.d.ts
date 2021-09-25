@@ -1,10 +1,10 @@
 import 'react-i18next';
-import transaltions from './public/locales/en/translation.json';
+import home from './public/locales/en/home.json';
 
 declare module 'react-i18next' {
   interface CustomTypeOptions {
     resources: {
-      transaltions: typeof transaltions;
+      home: typeof home;
     };
   }
 }

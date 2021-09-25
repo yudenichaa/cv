@@ -15,7 +15,7 @@ import { useTranslation } from 'react-i18next';
 const cl = cn.bind(styles);
 
 export default function Home() {
-  const { t } = useTranslation();
+  const { t } = useTranslation('home');
 
   return (
     <>

@@ -10,6 +10,13 @@
   "ui": {
     "modal": {
       "close": "Close modal window"
+    },
+    "themeSwitcher": {
+      "label": "Theme switcher"
+    },
+    "languageSwitcher": {
+      "languagesList": "Languages list",
+      "languageSelection": "Language selection"
     }
   }
 }

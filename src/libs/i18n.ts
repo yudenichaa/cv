@@ -15,7 +15,7 @@ i18n
     detection: detectorOptions,
     fallbackLng: 'en',
     saveMissing: true,
-    debug: true,
+    debug: false,
     interpolation: {
       escapeValue: false,
     },

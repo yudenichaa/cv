@@ -13,7 +13,7 @@ interface IModal {
 }
 
 export default function Modal({ open, onClose, children }: IModal) {
-  const { t } = useTranslation('translation', { keyPrefix: 'ui.modal' });
+  const { t } = useTranslation('home', { keyPrefix: 'ui.modal' });
   const modalContentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

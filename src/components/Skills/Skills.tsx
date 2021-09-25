@@ -7,13 +7,13 @@ import { useTranslation } from 'react-i18next';
 const cl = cn.bind(styles);
 
 export default function Skills() {
-  const { t } = useTranslation();
+  const { t } = useTranslation('home', { keyPrefix: 'skills' });
   const isDesktopScreen = useMatchMedia('(min-width: 1276px)');
 
   return (
     <div className={cl('skills')}>
       <h2 tabIndex={0} className="mb_28">
-        {t('skills.headline')}
+        {t('headline')}
       </h2>
       {isDesktopScreen ? (
         <div className="flex justify-center">

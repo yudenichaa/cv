@@ -9,7 +9,9 @@ import { languageOptions } from 'config';
 const cl = cn.bind(styles);
 
 export default function LanguageSwitcher() {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation('home', {
+    keyPrefix: 'ui.languageSwitcher',
+  });
   const currentLanguage = i18n.resolvedLanguage;
   const [optionsOpen, setOptionsOpen] = useState(false);
   const collapseSwitcherTimerID = useRef<number>();
@@ -95,7 +97,7 @@ export default function LanguageSwitcher() {
             transform: `rotate(${optionsOpen ? '180' : '0'}deg)`,
           }}
           src={ChevronIcon}
-          alt="Список языков"
+          alt={t('languagesList')}
         />
         <div
           style={{
@@ -109,7 +111,7 @@ export default function LanguageSwitcher() {
       <img
         className={cl('language-switcher__language-icon')}
         src={LanguageIcon}
-        alt="Выбор языка"
+        alt={t('languageSelection')}
       />
     </div>
   );
