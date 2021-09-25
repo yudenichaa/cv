@@ -1,4 +1,4 @@
-interface ILanguageOptions {
+export interface ILanguageOptions {
   [key: string]: string;
 }
 

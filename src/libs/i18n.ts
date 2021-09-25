@@ -13,9 +13,11 @@ i18n
   .use(initReactI18next)
   .init({
     detection: detectorOptions,
+    supportedLngs: ['en', 'ru'],
+    ns: ['common'],
     fallbackLng: 'en',
     saveMissing: true,
-    debug: false,
+    debug: true,
     interpolation: {
       escapeValue: false,
     },

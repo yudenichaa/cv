@@ -1,5 +1,14 @@
-import { useState, useCallback, useLayoutEffect, useContext } from 'react';
+import {
+  useState,
+  useCallback,
+  useLayoutEffect,
+  useContext,
+  useEffect,
+} from 'react';
 import ThemeContext from 'contexts/theme';
+import { useTranslation } from 'react-i18next';
+import { useHistory } from 'react-router';
+import { languageOptions } from 'config';
 
 export const useMatchMedia = (mediaQuery: string) => {
   const [match, setMatch] = useState(matchMedia(mediaQuery).matches);
@@ -57,4 +66,35 @@ export const useDarkTheme = (): [boolean, () => void] => {
 
 export const useTheme = () => {
   return useContext(ThemeContext);
+};
+
+export const useLanguagePathSwitcher = () => {
+  const { i18n } = useTranslation();
+  const languageCode = i18n.language;
+  const history = useHistory();
+
+  useEffect(() => {
+    if (languageCode) {
+      const path = history.location.pathname;
+      const indexOfSecondSlash = path.indexOf('/', 1);
+      if (indexOfSecondSlash === -1) {
+        const languagePart = path.slice(1);
+        if (languagePart in languageOptions) {
+          history.replace('/' + languageCode);
+        } else {
+          history.replace('/' + languageCode + path);
+        }
+      } else {
+        const languagePart = path.slice(1, indexOfSecondSlash);
+        if (languagePart in languageOptions) {
+          const pathWithoutLanguage = path.slice(indexOfSecondSlash + 1);
+          history.replace('/' + languageCode + '/' + pathWithoutLanguage);
+        } else {
+          history.replace('/' + languageCode + path);
+        }
+      }
+    }
+  }, [languageCode, history]);
+
+  return languageCode;
 };

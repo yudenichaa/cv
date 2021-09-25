@@ -12,7 +12,7 @@ export default function LanguageSwitcher() {
   const { t, i18n } = useTranslation('home', {
     keyPrefix: 'ui.languageSwitcher',
   });
-  const currentLanguage = i18n.resolvedLanguage;
+  const currentLanguage = i18n.language;
   const [optionsOpen, setOptionsOpen] = useState(false);
   const collapseSwitcherTimerID = useRef<number>();
 
