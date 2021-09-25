@@ -4,19 +4,20 @@ import LanguageIcon from 'assets/images/language.svg';
 import ChevronIcon from 'assets/images/chevron.svg';
 import React, { useState, useCallback, useRef, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useHistory } from 'react-router';
 import { languageOptions } from 'config';
 
 const cl = cn.bind(styles);
 
 export default function LanguageSwitcher() {
-  const history = useHistory();
   const { i18n } = useTranslation();
   const currentLanguage = i18n.resolvedLanguage;
-  const [open, setOpen] = useState(false);
+  const [optionsOpen, setOptionsOpen] = useState(false);
   const collapseSwitcherTimerID = useRef<number>();
 
-  const toggleSelectOpen = useCallback(() => setOpen((open) => !open), []);
+  const toggleSelectOpen = useCallback(
+    () => setOptionsOpen((open) => !open),
+    []
+  );
 
   const onLanguageSwitcherKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLDivElement>) => {
@@ -28,40 +29,32 @@ export default function LanguageSwitcher() {
   );
 
   const onLanguageSwitcherBlur = useCallback(() => {
-    collapseSwitcherTimerID.current = setTimeout(() => setOpen(false));
+    collapseSwitcherTimerID.current = setTimeout(() => setOptionsOpen(false));
   }, []);
 
   const onLanguageSwitcherFocus = useCallback(() => {
     if (collapseSwitcherTimerID.current) {
       clearTimeout(collapseSwitcherTimerID.current);
+      collapseSwitcherTimerID.current = undefined;
     }
   }, []);
 
   const onLanguageChange = useCallback(
     (languageCode: string) => {
       if (languageCode !== i18n.language) {
-        const path = history.location.pathname;
-        const indexOfSecondSlash = path.indexOf('/', 1);
-        if (indexOfSecondSlash === -1) {
-          const languagePart = path.slice(1);
-          if (languagePart in languageOptions) {
-            history.replace('/' + languageCode);
-          } else {
-            history.replace('/' + languageCode + path);
-          }
-        } else {
-          const languagePart = path.slice(1, indexOfSecondSlash);
-          if (languagePart in languageOptions) {
-            const pathWithoutLanguage = path.slice(indexOfSecondSlash + 1);
-            history.replace('/' + languageCode + '/' + pathWithoutLanguage);
-          } else {
-            history.replace('/' + languageCode + path);
-          }
-        }
         i18n.changeLanguage(languageCode);
       }
     },
-    [history, i18n]
+    [i18n]
+  );
+
+  const onLangaugeOptionKeyDown = useCallback(
+    (event: React.KeyboardEvent<HTMLDivElement>, languageCode: string) => {
+      if (event.key === 'Enter') {
+        onLanguageChange(languageCode);
+      }
+    },
+    [onLanguageChange]
   );
 
   const options = useMemo(() => {
@@ -71,15 +64,18 @@ export default function LanguageSwitcher() {
           key={languageCode}
           tabIndex={0}
           role="option"
-          onClick={() => onLanguageChange(languageCode)}
           aria-selected={currentLanguage === languageCode ? 'true' : 'false'}
+          onClick={() => onLanguageChange(languageCode)}
+          onKeyDown={(event: React.KeyboardEvent<HTMLDivElement>) =>
+            onLangaugeOptionKeyDown(event, languageCode)
+          }
           className={cl('language-switcher__select-list-item')}
         >
           <p>{languageName}</p>
         </div>
       )
     );
-  }, [currentLanguage, onLanguageChange]);
+  }, [currentLanguage, onLanguageChange, onLangaugeOptionKeyDown]);
 
   return (
     <div className={cl('language-switcher')}>
@@ -96,14 +92,14 @@ export default function LanguageSwitcher() {
         <img
           className={cl('language-switcher__chevron-icon')}
           style={{
-            transform: `rotate(${open ? '180' : '0'}deg)`,
+            transform: `rotate(${optionsOpen ? '180' : '0'}deg)`,
           }}
           src={ChevronIcon}
           alt="Список языков"
         />
         <div
           style={{
-            display: open ? 'block' : 'none',
+            display: optionsOpen ? 'block' : 'none',
           }}
           className={cl('language-switcher__select-list')}
         >

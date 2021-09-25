@@ -6,7 +6,7 @@ const cl = cn.bind(styles);
 
 export default function Experience() {
   return (
-    <section className={cl('experience')}>
+    <div className={cl('experience')}>
       <h2 tabIndex={0} className="mb_28">
         Опыт
       </h2>
@@ -31,6 +31,6 @@ export default function Experience() {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 }

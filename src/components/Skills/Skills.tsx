@@ -2,16 +2,18 @@ import styles from './skills.module.scss';
 import cn from 'classnames/bind';
 import skills from './skills.json';
 import { useMatchMedia } from 'hooks';
+import { useTranslation } from 'react-i18next';
 
 const cl = cn.bind(styles);
 
 export default function Skills() {
+  const { t } = useTranslation();
   const isDesktopScreen = useMatchMedia('(min-width: 1276px)');
 
   return (
-    <section className={cl('skills')}>
+    <div className={cl('skills')}>
       <h2 tabIndex={0} className="mb_28">
-        Навыки
+        {t('skills.headline')}
       </h2>
       {isDesktopScreen ? (
         <div className="flex justify-center">
@@ -36,6 +38,6 @@ export default function Skills() {
           )}
         </p>
       )}
-    </section>
+    </div>
   );
 }

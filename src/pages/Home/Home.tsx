@@ -18,41 +18,41 @@ export default function Home() {
   const { t } = useTranslation();
 
   return (
-    <div>
+    <>
       <Helmet>
         <title>{t('title')}</title>
       </Helmet>
       <Header />
       <main>
-        <div className={cl('home__intro-container')}>
+        <section className={cl('home__intro-container')}>
           <div className={cl('home__content-item')}>
             <Intro />
           </div>
-        </div>
-        <div className={cl('home__skills-container')}>
+        </section>
+        <section className={cl('home__skills-container')}>
           <div className={cl('home__content-item')}>
             <Skills />
           </div>
-        </div>
-        <div className={cl('home__experience-container')}>
+        </section>
+        <section className={cl('home__experience-container')}>
           <div className={cl('home__content-item')}>
             <Experience />
           </div>
-        </div>
-        <div className={cl('home__portfolio-container')}>
+        </section>
+        <section className={cl('home__portfolio-container')}>
           <div className={cl('home__content-item')}>
             <Portfolio />
           </div>
-        </div>
-        <div className={cl('home__education-container')}>
+        </section>
+        <section className={cl('home__education-container')}>
           <div className={cl('home__content-item')}>
             <Education />
           </div>
-        </div>
+        </section>
       </main>
       <footer className={cl('home__footer')}>
         <Contacts />
       </footer>
-    </div>
+    </>
   );
 }

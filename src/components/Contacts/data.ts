@@ -26,7 +26,7 @@ const contacts = [
     image: hashnodeIcon,
   },
   {
-    name: 'Хабр',
+    name: 'Habr',
     link: 'https://habr.com/ru/users/nightzen/',
     image: habrIcon,
   },

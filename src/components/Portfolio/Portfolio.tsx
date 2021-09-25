@@ -7,7 +7,7 @@ const cl = cn.bind(styles);
 
 export default function Portfolio() {
   return (
-    <section className={cl('portfolio')}>
+    <div className={cl('portfolio')}>
       <h2 tabIndex={0} className="mb_28">
         Портфолио
       </h2>
@@ -29,6 +29,6 @@ export default function Portfolio() {
           />
         ))}
       </div>
-    </section>
+    </div>
   );
 }

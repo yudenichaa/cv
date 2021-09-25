@@ -6,7 +6,7 @@ const cl = cn.bind(styles);
 
 export default function Contacts() {
   return (
-    <section className={cl('contacts')}>
+    <div className={cl('contacts')}>
       <ul className={cl('contacts__list')}>
         {contacts.map((contact) => (
           <li key={contact.name} className={cl('contacts__list-item')}>
@@ -25,6 +25,6 @@ export default function Contacts() {
           </li>
         ))}
       </ul>
-    </section>
+    </div>
   );
 }

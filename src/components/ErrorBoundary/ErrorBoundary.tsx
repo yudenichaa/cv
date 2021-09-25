@@ -4,15 +4,18 @@ import cn from 'classnames/bind';
 
 const cl = cn.bind(styles);
 
-interface Props {
+interface ErrorBoundaryProps {
   children: ReactNode;
 }
 
-interface State {
+interface ErrorBoundaryState {
   error: boolean;
 }
 
-export default class ErrorBoundary extends Component<Props, State> {
+export default class ErrorBoundary extends Component<
+  ErrorBoundaryProps,
+  ErrorBoundaryState
+> {
   state = { error: false };
 
   static getDerivedStateFromError() {

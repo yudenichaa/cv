@@ -2,7 +2,14 @@
   "title": "Alexandr Yudenich — Frontend developer",
   "intro": {
     "name": "Alexandr Yudenich",
-    "profession": "Frontend developer at",
-    "company": "Lighthouse"
+    "profession": "Frontend developer at <2>Lighthouse</2>"
+  },
+  "skills": {
+    "headline": "Skills"
+  },
+  "ui": {
+    "modal": {
+      "close": "Close modal window"
+    }
   }
 }
