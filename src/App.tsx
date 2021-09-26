@@ -12,7 +12,15 @@ function App() {
 
   return (
     <>
-      <Helmet htmlAttributes={{ lang: languageCode }} />
+      <Helmet
+        htmlAttributes={{ lang: languageCode }}
+        meta={[
+          {
+            name: 'theme-color',
+            content: isDarkTheme ? '#22272e' : '#ffffff',
+          },
+        ]}
+      />
       <ThemeContext.Provider value={{ isDarkTheme, toggleTheme }}>
         <HomePage />
       </ThemeContext.Provider>

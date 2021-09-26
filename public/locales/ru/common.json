@@ -1,1 +1,14 @@
-{}
+{
+  "ui": {
+    "themeSwitcher": {
+      "label": "Переключатель темы"
+    },
+    "languageSwitcher": {
+      "languagesList": "Список языков",
+      "languageSelection": "Выбор языка"
+    },
+    "errorBoundary": {
+      "message": "Что-то пошло не так. Попробуйте перезагрузить страницу."
+    }
+  }
+}

@@ -1,1 +1,14 @@
-{}
+{
+  "ui": {
+    "themeSwitcher": {
+      "label": "Theme switcher"
+    },
+    "languageSwitcher": {
+      "languagesList": "Languages list",
+      "languageSelection": "Language selection"
+    },
+    "errorBoundary": {
+      "message": "Something went wrong. Try reloading the page."
+    }
+  }
+}

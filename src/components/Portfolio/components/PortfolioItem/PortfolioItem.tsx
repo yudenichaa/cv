@@ -1,19 +1,12 @@
 import GitHubIcon from 'assets/images/github.svg';
 import styles from './portfolio-item.module.scss';
+import { IPortfolioItemData } from 'components/Portfolio';
 import cn from 'classnames/bind';
 
 const cl = cn.bind(styles);
 
-interface IPortfolioItem {
-  portfolioItem: {
-    name: string;
-    github?: string;
-    link: {
-      text: string;
-      url: string;
-    };
-    description: string;
-  };
+export interface IPortfolioItem {
+  portfolioItem: IPortfolioItemData;
 }
 
 export default function PortfolioItem({ portfolioItem }: IPortfolioItem) {

@@ -1,22 +1,162 @@
 {
   "title": "Alexandr Yudenich — Frontend developer",
+  "description": "CV",
   "intro": {
     "name": "Alexandr Yudenich",
     "profession": "Frontend developer at <2>Lighthouse</2>"
   },
   "skills": {
-    "headline": "Skills"
+    "headline": "Skills",
+    "data": {
+      "basic": ["HTML", "CSS", "JavaScript", "TypeScript"],
+      "react": ["React", "Redux", "Redux Saga", "React Router"],
+      "styles": ["BEM", "SASS/SCSS", "CSS Modules", "Styled Components"],
+      "tests": ["Jest", "Cypress", "Testing Library"],
+      "network": ["REST", "GraphQL"],
+      "docs": ["JSDoc", "Storybook"],
+      "frameworks": ["Next.js", "Strapi"],
+      "languages": ["C++", "Python"],
+      "git": ["Git"]
+    }
   },
-  "ui": {
-    "modal": {
-      "close": "Close modal window"
+  "experience": {
+    "headline": "Experience",
+    "data": [
+      {
+        "company": "Lighthouse",
+        "link": {
+          "text": "www.cfa.digital",
+          "url": "https://www.cfa.digital"
+        },
+        "city": "Moscow",
+        "period": "July 2021 — Current",
+        "description": "Development of a digital online factoring platform."
+      },
+      {
+        "company": "Izzy Agency",
+        "link": {
+          "text": "izzy.agency",
+          "url": "https://izzy.agency"
+        },
+        "city": "Krasnodar",
+        "period": "January 2021 — July 2021",
+        "description": "Development of a B2B platform for the sale and transportation of goods."
+      },
+      {
+        "company": "Magic Digital Agency",
+        "link": {
+          "text": "adastrum.io",
+          "url": "https://adastrum.io"
+        },
+        "city": "Krasnodar",
+        "period": "July 2020 — January 2021",
+        "description": "Development of an interactive educational platform."
+      },
+      {
+        "company": "Technopolis \"ERA\"",
+        "link": {
+          "text": "era-tehnopolis.ru",
+          "url": "https://era-tehnopolis.ru"
+        },
+        "city": "Anapa",
+        "period": "July 2019 — July 2020",
+        "description": "Scientific company operator."
+      }
+    ]
+  },
+  "portfolio": {
+    "headline": "Portfolio",
+    "commercial": {
+      "headline": "Commercial projects",
+      "data": [
+        {
+          "name": "Digital online factoring platform",
+          "link": {
+            "text": "factoring.cfa.digital",
+            "url": "https://factoring.cfa.digital"
+          },
+          "description": "B2B platform for financing contracts for the supply of goods with deferred payment."
+        },
+        {
+          "name": "Transaxio",
+          "link": {
+            "text": "transaxio.pro",
+            "url": "https://transaxio.pro"
+          },
+          "description": "B2B platform for the sale and transportation of goods."
+        }
+      ]
     },
-    "themeSwitcher": {
-      "label": "Theme switcher"
+    "personal": {
+      "headline": "Personal projects",
+      "data": [
+        {
+          "name": "Chat",
+          "github": "https://github.com/yudenichaa/chat-rooms",
+          "link": {
+            "text": "chat-rooms.yudenichaa.vercel.app",
+            "url": "https://chat-rooms.yudenichaa.vercel.app"
+          },
+          "description": "Create rooms and exchange messages in real time. Registration and authorization of users."
+        },
+        {
+          "name": "Posts",
+          "github": "https://github.com/yudenichaa/instagram-posts",
+          "link": {
+            "text": "instagram-posts.yudenichaa.vercel.app",
+            "url": "https://instagram-posts.yudenichaa.vercel.app"
+          },
+          "description": "Real-time publishing. Comments on publications. Registration and authorization of users."
+        },
+        {
+          "name": "Covid-19 tracker",
+          "github": "https://github.com/yudenichaa/covid-tracker",
+          "link": {
+            "text": "covid-tracker.yudenichaa.vercel.app",
+            "url": "https://covid-tracker.yudenichaa.vercel.app"
+          },
+          "description": "Tracking the number of cases, recovered and deaths. The data is presented in the form of a table, a graph and a map. Statistics can be viewed for a specific country or around the world."
+        },
+        {
+          "name": "Movies",
+          "github": "https://github.com/yudenichaa/chat-rooms",
+          "link": {
+            "text": "netflix-movies.yudenichaa.vercel.app",
+            "url": "https://netflix-movies.yudenichaa.vercel.app"
+          },
+          "description": "View popular movies in various categories. Movies are displayed in the form of a tape, scrolling through which is carried out using the mouse or gestures."
+        }
+      ]
+    }
+  },
+  "education": {
+    "headline": "Education",
+    "university": {
+      "name": "Kuban State Technological University",
+      "link": {
+        "text": "kubstu.ru",
+        "url": "https://kubstu.ru"
+      },
+      "city": "Krasnodar",
+      "institute": "Institute of Computer Systems and Information Security",
+      "speciality": "Specialty: software engineering"
     },
-    "languageSwitcher": {
-      "languagesList": "Languages list",
-      "languageSelection": "Language selection"
+    "additional": {
+      "headline": "Additional education",
+      "data": [
+        {
+          "link": {
+            "text": "Algorithmic Toolbox",
+            "url": "https://www.coursera.org/account/accomplishments/certificate/V4MA6M3ABFC6"
+          }
+        },
+        {
+          "link": {
+            "text": "Data Structures",
+            "url": "https://www.coursera.org/account/accomplishments/certificate/T35M4WJLRQ6K"
+          }
+        }
+      ]
     }
   }
 }

@@ -9,7 +9,7 @@ const cl = cn.bind(styles);
 
 export default function ThemeSwitcher() {
   const { isDarkTheme, toggleTheme } = useTheme();
-  const { t } = useTranslation('home', { keyPrefix: 'ui.themeSwitcher' });
+  const { t } = useTranslation('common', { keyPrefix: 'ui.themeSwitcher' });
 
   return (
     <button

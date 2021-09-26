@@ -9,7 +9,7 @@ import { languageOptions } from 'config';
 const cl = cn.bind(styles);
 
 export default function LanguageSwitcher() {
-  const { t, i18n } = useTranslation('home', {
+  const { t, i18n } = useTranslation('common', {
     keyPrefix: 'ui.languageSwitcher',
   });
   const currentLanguage = i18n.language;

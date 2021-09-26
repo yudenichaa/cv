@@ -1,3 +1,7 @@
+import styles from './home.module.scss';
+import cn from 'classnames/bind';
+import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 import {
   Intro,
   Skills,
@@ -7,10 +11,6 @@ import {
   Contacts,
   Header,
 } from 'components';
-import styles from './home.module.scss';
-import cn from 'classnames/bind';
-import { Helmet } from 'react-helmet';
-import { useTranslation } from 'react-i18next';
 
 const cl = cn.bind(styles);
 
@@ -19,9 +19,15 @@ export default function Home() {
 
   return (
     <>
-      <Helmet>
-        <title>{t('title')}</title>
-      </Helmet>
+      <Helmet
+        title={t('title')}
+        meta={[
+          {
+            name: 'description',
+            content: t('description'),
+          },
+        ]}
+      ></Helmet>
       <Header />
       <main>
         <section className={cl('home__intro-container')}>

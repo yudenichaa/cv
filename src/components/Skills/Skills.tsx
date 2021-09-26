@@ -1,13 +1,19 @@
 import styles from './skills.module.scss';
 import cn from 'classnames/bind';
-import skills from './skills.json';
 import { useMatchMedia } from 'hooks';
 import { useTranslation } from 'react-i18next';
 
 const cl = cn.bind(styles);
 
+interface ISkills {
+  [key: string]: string[];
+}
+
 export default function Skills() {
   const { t } = useTranslation('home', { keyPrefix: 'skills' });
+  const skills = t<string, ISkills>('data', {
+    returnObjects: true,
+  });
   const isDesktopScreen = useMatchMedia('(min-width: 1276px)');
 
   return (

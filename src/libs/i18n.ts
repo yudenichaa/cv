@@ -17,7 +17,7 @@ i18n
     ns: ['common'],
     fallbackLng: 'en',
     saveMissing: true,
-    debug: true,
+    debug: process.env.NODE_ENV === 'production' ? false : true,
     interpolation: {
       escapeValue: false,
     },

@@ -2,7 +2,6 @@ import styles from './modal.module.scss';
 import cn from 'classnames/bind';
 import { ReactComponent as CrossIcon } from 'assets/images/cross.svg';
 import { useCallback, useEffect, useRef } from 'react';
-import { useTranslation } from 'react-i18next';
 
 const cl = cn.bind(styles);
 
@@ -13,7 +12,6 @@ interface IModal {
 }
 
 export default function Modal({ open, onClose, children }: IModal) {
-  const { t } = useTranslation('home', { keyPrefix: 'ui.modal' });
   const modalContentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -45,7 +43,7 @@ export default function Modal({ open, onClose, children }: IModal) {
       </div>
       <button
         type="button"
-        aria-label={t('close')}
+        aria-label="Close modal window"
         onClick={onClose}
         className={cl('modal__close-button')}
       >
@@ -53,7 +51,7 @@ export default function Modal({ open, onClose, children }: IModal) {
       </button>
       <div
         role="button"
-        aria-label={t('close')}
+        aria-label="Close modal window"
         onClick={onClose}
         onKeyDown={onBackgroundKeyDown}
         tabIndex={0}

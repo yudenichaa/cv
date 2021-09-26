@@ -11,13 +11,13 @@ import './index.scss';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ErrorBoundary>
-      <Suspense fallback={<PageLoadingIndicator />}>
+    <Suspense fallback={<PageLoadingIndicator />}>
+      <ErrorBoundary>
         <Router>
           <App />
         </Router>
-      </Suspense>
-    </ErrorBoundary>
+      </ErrorBoundary>
+    </Suspense>
   </React.StrictMode>,
   document.getElementById('root')
 );

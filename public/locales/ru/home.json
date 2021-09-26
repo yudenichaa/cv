@@ -1,22 +1,162 @@
 {
   "title": "Александр Юденич — Фронтенд разработчик",
+  "description": "Резюме",
   "intro": {
     "name": "Александр Юденич",
     "profession": "Фронтенд разработчик в <2>Лайтхаус</2>"
   },
   "skills": {
-    "headline": "Навыки"
+    "headline": "Навыки",
+    "data": {
+      "basic": ["HTML", "CSS", "JavaScript", "TypeScript"],
+      "react": ["React", "Redux", "Redux Saga", "React Router"],
+      "styles": ["BEM", "SASS/SCSS", "CSS Modules", "Styled Components"],
+      "tests": ["Jest", "Cypress", "Testing Library"],
+      "network": ["REST", "GraphQL"],
+      "docs": ["JSDoc", "Storybook"],
+      "frameworks": ["Next.js", "Strapi"],
+      "languages": ["C++", "Python"],
+      "git": ["Git"]
+    }
   },
-  "ui": {
-    "modal": {
-      "close": "Закрыть модальное окно"
+  "experience": {
+    "headline": "Опыт",
+    "data": [
+      {
+        "company": "Лайтхаус",
+        "link": {
+          "text": "www.cfa.digital",
+          "url": "https://www.cfa.digital"
+        },
+        "city": "Москва",
+        "period": "Июль 2021 — по настоящее время",
+        "description": "Разработка платформы цифрового онлайн факторинга."
+      },
+      {
+        "company": "Izzy Agency",
+        "link": {
+          "text": "izzy.agency",
+          "url": "https://izzy.agency"
+        },
+        "city": "Краснодар",
+        "period": "Январь 2021 — Июль 2021",
+        "description": "Разработка B2B платформы для продажи и перевозки товаров."
+      },
+      {
+        "company": "Magic Digital Agency",
+        "link": {
+          "text": "adastrum.io",
+          "url": "https://adastrum.io"
+        },
+        "city": "Краснодар",
+        "period": "Июль 2020 — Январь 2021",
+        "description": "Разработка интерактивной обучающей платформы."
+      },
+      {
+        "company": "Технополис \"ЭРА\"",
+        "link": {
+          "text": "era-tehnopolis.ru",
+          "url": "https://era-tehnopolis.ru"
+        },
+        "city": "Анапа",
+        "period": "Июль 2019 — Июль 2020",
+        "description": "Оператор научной роты."
+      }
+    ]
+  },
+  "portfolio": {
+    "headline": "Портфолио",
+    "commercial": {
+      "headline": "Коммерческие проекты",
+      "data": [
+        {
+          "name": "Платформа цифрового онлайн факторинга",
+          "link": {
+            "text": "factoring.cfa.digital",
+            "url": "https://factoring.cfa.digital"
+          },
+          "description": "B2B платформа для финансирования контрактов по поставке товаров с отсрочкой платежа."
+        },
+        {
+          "name": "Transaxio",
+          "link": {
+            "text": "transaxio.pro",
+            "url": "https://transaxio.pro"
+          },
+          "description": "B2B платформа для продажи и перевозки товаров."
+        }
+      ]
     },
-    "themeSwitcher": {
-      "label": "Переключатель темы"
+    "personal": {
+      "headline": "Личные проекты",
+      "data": [
+        {
+          "name": "Чат",
+          "github": "https://github.com/yudenichaa/chat-rooms",
+          "link": {
+            "text": "chat-rooms.yudenichaa.vercel.app",
+            "url": "https://chat-rooms.yudenichaa.vercel.app"
+          },
+          "description": "Создание комнат и обмен сообщениями в режиме реального времени. Регистрация и авторизация пользователей."
+        },
+        {
+          "name": "Посты",
+          "github": "https://github.com/yudenichaa/instagram-posts",
+          "link": {
+            "text": "instagram-posts.yudenichaa.vercel.app",
+            "url": "https://instagram-posts.yudenichaa.vercel.app"
+          },
+          "description": "Создание публикаций в режиме реального времени. Комментарии к публикациям. Регистрация и авторизация пользователей."
+        },
+        {
+          "name": "Трекер Covid-19",
+          "github": "https://github.com/yudenichaa/covid-tracker",
+          "link": {
+            "text": "covid-tracker.yudenichaa.vercel.app",
+            "url": "https://covid-tracker.yudenichaa.vercel.app"
+          },
+          "description": "Отслеживание количества заболевших, выздоровевших и смертельных исходов. Данные представлены в виде таблицы, графика и карты. Просмотр статистики доступен для определённой страны или по всему миру."
+        },
+        {
+          "name": "Фильмы",
+          "github": "https://github.com/yudenichaa/chat-rooms",
+          "link": {
+            "text": "netflix-movies.yudenichaa.vercel.app",
+            "url": "https://netflix-movies.yudenichaa.vercel.app"
+          },
+          "description": "Просмотр популярных фильмов в различных категориях. Фильмы отображаются в виде ленты, пролистывание которой осуществляется при помощи мыши или жестов."
+        }
+      ]
+    }
+  },
+  "education": {
+    "headline": "Образование",
+    "university": {
+      "name": "Кубанский государственный технологический университет",
+      "link": {
+        "text": "kubstu.ru",
+        "url": "https://kubstu.ru"
+      },
+      "city": "Краснодар",
+      "institute": "Институт компьютерных систем и информационной безопасности",
+      "speciality": "Специальность: программная инженерия"
     },
-    "languageSwitcher": {
-      "languagesList": "Список языков",
-      "languageSelection": "Выбор языка"
+    "additional": {
+      "headline": "Дополнительное образование",
+      "data": [
+        {
+          "link": {
+            "text": "Algorithmic Toolbox",
+            "url": "https://www.coursera.org/account/accomplishments/certificate/V4MA6M3ABFC6"
+          }
+        },
+        {
+          "link": {
+            "text": "Data Structures",
+            "url": "https://www.coursera.org/account/accomplishments/certificate/T35M4WJLRQ6K"
+          }
+        }
+      ]
     }
   }
 }
