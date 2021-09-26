@@ -103,8 +103,8 @@
           "name": "Посты",
           "github": "https://github.com/yudenichaa/instagram-posts",
           "link": {
-            "text": "instagram-posts.yudenichaa.vercel.app",
-            "url": "https://instagram-posts.yudenichaa.vercel.app"
+            "text": "instagram-posts-yudenichaa.vercel.app",
+            "url": "https://instagram-posts-yudenichaa.vercel.app/"
           },
           "description": "Создание публикаций в режиме реального времени. Комментарии к публикациям. Регистрация и авторизация пользователей."
         },
@@ -112,8 +112,8 @@
           "name": "Трекер Covid-19",
           "github": "https://github.com/yudenichaa/covid-tracker",
           "link": {
-            "text": "covid-tracker.yudenichaa.vercel.app",
-            "url": "https://covid-tracker.yudenichaa.vercel.app"
+            "text": "covid-tracker-yudenichaa.vercel.app",
+            "url": "https://covid-tracker-yudenichaa.vercel.app/"
           },
           "description": "Отслеживание количества заболевших, выздоровевших и смертельных исходов. Данные представлены в виде таблицы, графика и карты. Просмотр статистики доступен для определённой страны или по всему миру."
         },
