@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
 
   &__select {
     position: relative;
