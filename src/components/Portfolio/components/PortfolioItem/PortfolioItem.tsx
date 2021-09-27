@@ -13,7 +13,7 @@ export default function PortfolioItem({ portfolioItem }: IPortfolioItem) {
   return (
     <div key={portfolioItem.name}>
       <div className="flex mb_12">
-        <h4 className={portfolioItem.github && 'mr_12'}>
+        <h4 className={cn('h4', portfolioItem.github && 'mr_12')}>
           {portfolioItem.name}
         </h4>
         {portfolioItem.github && (
