@@ -96,5 +96,5 @@ export const useLanguagePathSwitcher = () => {
     }
   }, [languageCode, history]);
 
-  return languageCode;
+  return i18n;
 };
