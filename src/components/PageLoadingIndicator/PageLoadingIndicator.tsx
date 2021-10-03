@@ -6,7 +6,7 @@ const cl = cn.bind(styles);
 
 export default function PageLoadingIndicator() {
   return (
-    <div className={cl('page-loading-indicator')}>
+    <div className={cl('page-loading-indicator')} role="alert" aria-busy="true">
       <PageLoadingAnimation />
     </div>
   );

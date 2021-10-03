@@ -2,13 +2,13 @@ import { useDarkTheme, useLanguagePathSwitcher } from 'hooks';
 import { ThemeContext } from 'contexts';
 import { Helmet } from 'react-helmet';
 import { Home } from 'pages';
-import { Suspense } from 'react';
+
 function App() {
   const [isDarkTheme, toggleTheme] = useDarkTheme();
   const languageCode = useLanguagePathSwitcher();
 
   return (
-    <Suspense fallback={null}>
+    <>
       <Helmet
         htmlAttributes={{ lang: languageCode }}
         meta={[
@@ -21,7 +21,7 @@ function App() {
       <ThemeContext.Provider value={{ isDarkTheme, toggleTheme }}>
         <Home />
       </ThemeContext.Provider>
-    </Suspense>
+    </>
   );
 }
 
