@@ -1,17 +1,14 @@
 import { useDarkTheme, useLanguagePathSwitcher } from 'hooks';
-import ThemeContext from 'contexts/theme';
-import { lazy } from 'react';
-import pMinDelay from 'p-min-delay';
+import { ThemeContext } from 'contexts';
 import { Helmet } from 'react-helmet';
-
-const HomePage = lazy(() => pMinDelay(import('./pages/Home'), 600));
-
+import { Home } from 'pages';
+import { Suspense } from 'react';
 function App() {
   const [isDarkTheme, toggleTheme] = useDarkTheme();
   const languageCode = useLanguagePathSwitcher();
 
   return (
-    <>
+    <Suspense fallback={null}>
       <Helmet
         htmlAttributes={{ lang: languageCode }}
         meta={[
@@ -22,9 +19,9 @@ function App() {
         ]}
       />
       <ThemeContext.Provider value={{ isDarkTheme, toggleTheme }}>
-        <HomePage />
+        <Home />
       </ThemeContext.Provider>
-    </>
+    </Suspense>
   );
 }
 

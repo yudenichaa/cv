@@ -5,7 +5,7 @@ import {
   useContext,
   useEffect,
 } from 'react';
-import ThemeContext from 'contexts/theme';
+import { ThemeContext } from 'contexts';
 import { useTranslation } from 'react-i18next';
 import { useHistory } from 'react-router';
 import { languageOptions } from 'config';

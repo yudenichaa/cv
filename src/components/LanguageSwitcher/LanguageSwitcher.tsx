@@ -5,6 +5,8 @@ import ChevronIcon from 'assets/images/chevron.svg';
 import React, { useState, useCallback, useRef, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { languageOptions } from 'config';
+import { PageLoadingIndicator } from 'components';
+import pMinDelay from 'p-min-delay';
 
 const cl = cn.bind(styles);
 
@@ -15,6 +17,7 @@ export default function LanguageSwitcher() {
   const currentLanguage = i18n.language;
   const [optionsOpen, setOptionsOpen] = useState(false);
   const collapseSwitcherTimerID = useRef<number>();
+  const [showLoader, setShowLoader] = useState(false);
 
   const toggleSelectOpen = useCallback(
     () => setOptionsOpen((open) => !open),
@@ -44,7 +47,13 @@ export default function LanguageSwitcher() {
   const onLanguageChange = useCallback(
     (languageCode: string) => {
       if (languageCode !== i18n.language) {
-        i18n.changeLanguage(languageCode);
+        setShowLoader(true);
+        pMinDelay(i18n.changeLanguage(languageCode), 600)
+          .then(() => setShowLoader(false))
+          .catch((error) => {
+            setShowLoader(false);
+            console.log(error);
+          });
       }
     },
     [i18n]
@@ -73,7 +82,7 @@ export default function LanguageSwitcher() {
           }
           className={cl('language-switcher__select-list-item')}
         >
-          <p>{languageName}</p>
+          <span>{languageName}</span>
         </div>
       )
     );
@@ -90,7 +99,7 @@ export default function LanguageSwitcher() {
         role="listbox"
         className={cn(cl('language-switcher__select'), 'mr_8')}
       >
-        <p>{languageOptions[i18n.language] || languageOptions['en']}</p>
+        <span>{languageOptions[i18n.language] || languageOptions['en']}</span>
         <img
           className={cl('language-switcher__chevron-icon')}
           style={{
@@ -113,6 +122,7 @@ export default function LanguageSwitcher() {
         src={LanguageIcon}
         alt={t('languageSelection')}
       />
+      {showLoader && <PageLoadingIndicator />}
     </div>
   );
 }
