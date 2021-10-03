@@ -12,8 +12,7 @@
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-i18next": "^11.12.0",
-    "react-router-dom": "^5.2.0",
-    "sass": "^1.42.1"
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^6.3.7",
@@ -43,7 +42,8 @@
     "stylelint-config-idiomatic-order": "^8.1.0",
     "stylelint-config-prettier": "^8.0.2",
     "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "sass": "^1.42.1"
   },
   "scripts": {
     "start": "react-scripts start",
