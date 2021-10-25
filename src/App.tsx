@@ -18,7 +18,7 @@ function App() {
           resolve();
         });
       }),
-      600
+      1000
     ).then(() => {
       setLoading(false);
     });
