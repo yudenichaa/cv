@@ -1,15 +1,14 @@
-import React from 'react';
+import { StrictMode, Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ErrorBoundary } from 'components';
-import { Suspense } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import 'libs/i18n';
 import './index.scss';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <StrictMode>
     <Suspense fallback={null}>
       <ErrorBoundary>
         <Router>
@@ -17,7 +16,7 @@ ReactDOM.render(
         </Router>
       </ErrorBoundary>
     </Suspense>
-  </React.StrictMode>,
+  </StrictMode>,
   document.getElementById('root')
 );
 

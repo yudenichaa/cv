@@ -80,7 +80,7 @@ export default function LanguageSwitcher() {
           onKeyDown={(event: React.KeyboardEvent<HTMLDivElement>) =>
             onLangaugeOptionKeyDown(event, languageCode)
           }
-          className={cl('language-switcher__select-list-item')}
+          className={cl('language-switcher__select-item')}
         >
           <span>{languageName}</span>
         </div>

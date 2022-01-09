@@ -9,6 +9,7 @@ import { ThemeContext } from 'contexts';
 import { useTranslation } from 'react-i18next';
 import { useHistory } from 'react-router';
 import { languageOptions } from 'config';
+import pMinDelay from 'p-min-delay';
 
 export const useMatchMedia = (mediaQuery: string) => {
   const [match, setMatch] = useState(matchMedia(mediaQuery).matches);
@@ -68,10 +69,24 @@ export const useTheme = () => {
   return useContext(ThemeContext);
 };
 
-export const useLanguagePathSwitcher = () => {
+export const useLanguage = (): [string, boolean] => {
   const { i18n } = useTranslation();
+  const [loading, setLoading] = useState(true);
   const languageCode = i18n.language;
   const history = useHistory();
+
+  useEffect(() => {
+    pMinDelay(
+      new Promise<void>((resolve) => {
+        i18n.on('loaded', () => {
+          resolve();
+        });
+      }),
+      1000
+    ).then(() => {
+      setLoading(false);
+    });
+  }, [i18n]);
 
   useEffect(() => {
     if (languageCode) {
@@ -96,5 +111,5 @@ export const useLanguagePathSwitcher = () => {
     }
   }, [languageCode, history]);
 
-  return i18n;
+  return [i18n.language, loading];
 };
