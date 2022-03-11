@@ -18,7 +18,6 @@
 
   &__intro-container,
   &__portfolio-container,
-
   &__education-container {
     background-color: #fff;
   }
@@ -38,13 +37,13 @@
 
 :global .dark-theme :local .home {
   &__intro-container,
-  &__experience-container,
+  &__portfolio-container,
   &__education-container {
     background-color: #22272e;
   }
 
   &__skills-container,
-  &__portfolio-container,
+  &__experience-container,
   &__footer {
     background-color: #2d333b;
   }
