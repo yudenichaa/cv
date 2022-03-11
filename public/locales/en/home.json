@@ -12,10 +12,10 @@
       "react": ["React", "Redux", "Redux Saga", "React Router"],
       "styles": ["BEM", "SASS/SCSS", "CSS Modules", "Styled Components"],
       "tests": ["Jest", "Cypress", "Testing Library"],
-      "network": ["REST", "GraphQL"],
+      "frameworks": ["Next.js", "Spring"],
+      "languages": ["Python", "Java"],
+      "network": ["GraphQL", "REST"],
       "docs": ["JSDoc", "Storybook"],
-      "frameworks": ["Next.js", "Strapi"],
-      "languages": ["C++", "Python"],
       "git": ["Git"]
     }
   },
@@ -30,7 +30,7 @@
         },
         "city": "Moscow",
         "period": "July 2021 — Current",
-        "description": "Development of a digital online factoring platform."
+        "description": "Product development for the Digital Financial Ecosystem."
       },
       {
         "company": "Izzy Agency",
@@ -70,12 +70,20 @@
       "headline": "Commercial projects",
       "data": [
         {
-          "name": "Digital online factoring platform",
+          "name": "Online Exchange Factoring platform",
           "link": {
             "text": "cfa.digital/factoring",
             "url": "https://www.cfa.digital/factoring"
           },
-          "description": "B2B platform for financing contracts for the supply of goods with deferred payment."
+          "description": "A new online factoring model in which a financing rate is chosen by the business. Factors compete with each other for the opportunity to finance a supplier."
+        },
+        {
+          "name": "Digital Financial Assets platform",
+          "link": {
+            "text": "cfa.digital/Assets",
+            "url": "https://www.cfa.digital/Assets"
+          },
+          "description": "Digital financial assets operate on the basis of a distributed registry. The platform allows to issue, buy, sell, exchange, and redeem digital financial assets."
         },
         {
           "name": "Transaxio",
@@ -83,12 +91,12 @@
             "text": "transaxio.pro",
             "url": "https://transaxio.pro"
           },
-          "description": "B2B platform for the sale and transportation of goods."
+          "description": "B2B platform for sale and transportation of goods."
         }
       ]
     },
     "personal": {
-      "headline": "Personal projects",
+      "headline": "Pet projects",
       "data": [
         {
           "name": "Chat",
@@ -97,7 +105,7 @@
             "text": "chat-rooms.yudenichaa.vercel.app",
             "url": "https://chat-rooms.yudenichaa.vercel.app"
           },
-          "description": "Create rooms and exchange messages in real time. Registration and authorization of users."
+          "description": "Create rooms and exchange messages in real time. User registration and authorization."
         },
         {
           "name": "Posts",
@@ -106,7 +114,7 @@
             "text": "instagram-posts-yudenichaa.vercel.app",
             "url": "https://instagram-posts-yudenichaa.vercel.app/"
           },
-          "description": "Real-time publishing. Comments on publications. Registration and authorization of users."
+          "description": "Real-time publishing. Comments on publications. User registration and authorization."
         },
         {
           "name": "Covid-19 tracker",
@@ -115,7 +123,7 @@
             "text": "covid-tracker-yudenichaa.vercel.app",
             "url": "https://covid-tracker-yudenichaa.vercel.app/"
           },
-          "description": "Tracking the number of cases, recovered and deaths. The data is presented in the form of a table, a graph and a map. Statistics can be viewed for a specific country or around the world."
+          "description": "Tracking a number of cases, recovered and deaths. Data is presented in the form of a table, a graph and a map."
         },
         {
           "name": "Movies",
@@ -124,7 +132,7 @@
             "text": "netflix-movies.yudenichaa.vercel.app",
             "url": "https://netflix-movies.yudenichaa.vercel.app"
           },
-          "description": "View popular movies in various categories. Movies are displayed in the form of a tape, scrolling through which is carried out using the mouse or gestures."
+          "description": "View popular movies in various categories."
         }
       ]
     }
@@ -154,6 +162,12 @@
           "link": {
             "text": "Data Structures",
             "url": "https://www.coursera.org/account/accomplishments/certificate/T35M4WJLRQ6K"
+          }
+        },
+        {
+          "link": {
+            "text": "Spring 5 and Spring Boot 2",
+            "url": "https://www.educative.io/verify-certificate/7AK3jyWB0KwuVNrymR5PyEf0586QMJlp9u3"
           }
         }
       ]

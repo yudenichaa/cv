@@ -12,10 +12,10 @@
       "react": ["React", "Redux", "Redux Saga", "React Router"],
       "styles": ["BEM", "SASS/SCSS", "CSS Modules", "Styled Components"],
       "tests": ["Jest", "Cypress", "Testing Library"],
-      "network": ["REST", "GraphQL"],
+      "frameworks": ["Next.js", "Spring"],
+      "languages": ["Python", "Java"],
+      "network": ["GraphQL", "REST"],
       "docs": ["JSDoc", "Storybook"],
-      "frameworks": ["Next.js", "Strapi"],
-      "languages": ["C++", "Python"],
       "git": ["Git"]
     }
   },
@@ -30,7 +30,7 @@
         },
         "city": "Москва",
         "period": "Июль 2021 — по настоящее время",
-        "description": "Разработка платформы цифрового онлайн факторинга."
+        "description": "Разработка продуктов для цифровой финансовой экосистемы."
       },
       {
         "company": "Izzy Agency",
@@ -70,12 +70,20 @@
       "headline": "Коммерческие проекты",
       "data": [
         {
-          "name": "Платформа цифрового онлайн факторинга",
+          "name": "Платформа биржевого онлайн факторинга",
           "link": {
             "text": "cfa.digital/factoring",
             "url": "https://www.cfa.digital/factoring"
           },
-          "description": "B2B платформа для финансирования контрактов по поставке товаров с отсрочкой платежа."
+          "description": "Новая модель онлайн факторинга, в которой ставку финансирования выбирает бизнес. Факторы конкурируют между собой за возможность профинансировать поставщика."
+        },
+        {
+          "name": "Платформа цифровых финансовых активов",
+          "link": {
+            "text": "cfa.digital/Assets",
+            "url": "https://www.cfa.digital/Assets"
+          },
+          "description": "ЦФА функционируют на основе распределенного реестра. Платформа позволяет выпускать, покупать, продавать, обменивать, а также погашать цифровые финансовые активы."
         },
         {
           "name": "Transaxio",
@@ -88,7 +96,7 @@
       ]
     },
     "personal": {
-      "headline": "Личные проекты",
+      "headline": "Pet проекты",
       "data": [
         {
           "name": "Чат",
@@ -100,13 +108,13 @@
           "description": "Создание комнат и обмен сообщениями в режиме реального времени. Регистрация и авторизация пользователей."
         },
         {
-          "name": "Посты",
+          "name": "Публикации",
           "github": "https://github.com/yudenichaa/instagram-posts",
           "link": {
             "text": "instagram-posts-yudenichaa.vercel.app",
             "url": "https://instagram-posts-yudenichaa.vercel.app/"
           },
-          "description": "Создание публикаций в режиме реального времени. Комментарии к публикациям. Регистрация и авторизация пользователей."
+          "description": "Создание публикаций и комментариев к ним в режиме реального времени. Регистрация и авторизация пользователей."
         },
         {
           "name": "Трекер Covid-19",
@@ -115,16 +123,16 @@
             "text": "covid-tracker-yudenichaa.vercel.app",
             "url": "https://covid-tracker-yudenichaa.vercel.app/"
           },
-          "description": "Отслеживание количества заболевших, выздоровевших и смертельных исходов. Данные представлены в виде таблицы, графика и карты. Просмотр статистики доступен для определённой страны или по всему миру."
+          "description": "Отслеживание количества заболевших, выздоровевших и смертельных исходов. Данные представлены в виде таблицы, графика и карты."
         },
         {
-          "name": "Фильмы",
+          "name": "Кино",
           "github": "https://github.com/yudenichaa/chat-rooms",
           "link": {
             "text": "netflix-movies.yudenichaa.vercel.app",
             "url": "https://netflix-movies.yudenichaa.vercel.app"
           },
-          "description": "Просмотр популярных фильмов в различных категориях. Фильмы отображаются в виде ленты, пролистывание которой осуществляется при помощи мыши или жестов."
+          "description": "Просмотр популярных фильмов в различных категориях."
         }
       ]
     }
@@ -154,6 +162,12 @@
           "link": {
             "text": "Data Structures",
             "url": "https://www.coursera.org/account/accomplishments/certificate/T35M4WJLRQ6K"
+          }
+        },
+        {
+          "link": {
+            "text": "Spring 5 and Spring Boot 2",
+            "url": "https://www.educative.io/verify-certificate/7AK3jyWB0KwuVNrymR5PyEf0586QMJlp9u3"
           }
         }
       ]

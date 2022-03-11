@@ -35,11 +35,6 @@ export default function Home() {
             <Intro />
           </div>
         </section>
-        <section className={cl('home__skills-container')}>
-          <div className={cl('home__content-item')}>
-            <Skills />
-          </div>
-        </section>
         <section className={cl('home__experience-container')}>
           <div className={cl('home__content-item')}>
             <Experience />
@@ -48,6 +43,11 @@ export default function Home() {
         <section className={cl('home__portfolio-container')}>
           <div className={cl('home__content-item')}>
             <Portfolio />
+          </div>
+        </section>
+        <section className={cl('home__skills-container')}>
+          <div className={cl('home__content-item')}>
+            <Skills />
           </div>
         </section>
         <section className={cl('home__education-container')}>
