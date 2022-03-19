@@ -15,11 +15,11 @@ body {
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #888;
+    background-color: #9b9b9b;
     border-radius: 5px;
 
     &:hover {
-      background-color: #696969;
+      background-color: #888;
     }
   }
 }

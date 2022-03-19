@@ -22,7 +22,7 @@ export default function Education() {
 
   return (
     <div className={cl('education')}>
-      <h2 tabIndex={0} className="mb_28">
+      <h2 tabIndex={0} className="mb_32">
         {t('headline')}
       </h2>
       <div className={cl('education__grid')}>

@@ -1,10 +1,16 @@
 .intro {
-  padding: 24px 0;
+  padding: 48px 0;
   text-align: center;
 
+  @media (min-width: 576px) {
+    padding: 64px 0;
+  }
+
   &__title {
-    @media (max-width: 576px) {
-      margin-bottom: 16px;
+    margin-bottom: 16px;
+
+    @media (min-width: 576px) {
+      margin-bottom: 8px;
     }
   }
 

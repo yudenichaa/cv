@@ -26,7 +26,7 @@ export default function Portfolio() {
 
   return (
     <div className={cl('portfolio')}>
-      <h2 tabIndex={0} className="mb_28">
+      <h2 tabIndex={0} className="mb_32">
         {t('headline')}
       </h2>
       <h3 className={cn(cl('portfolio__h3'), 'mb_28')}>
@@ -40,7 +40,7 @@ export default function Portfolio() {
           />
         ))}
       </div>
-      <h3 className={cn(cl('portfolio__h3'), 'mb_28')}>
+      <h3 className={cn(cl('portfolio__h3'), 'mb_32')}>
         {t('personal.headline')}
       </h3>
       <div className={cl('portfolio__grid')}>

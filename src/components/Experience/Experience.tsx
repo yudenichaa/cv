@@ -23,7 +23,7 @@ export default function Experience() {
 
   return (
     <div className={cl('experience')}>
-      <h2 tabIndex={0} className="mb_28">
+      <h2 tabIndex={0} className="mb_32">
         {t('headline')}
       </h2>
       <div className={cl('experience__grid')}>

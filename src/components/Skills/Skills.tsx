@@ -18,7 +18,7 @@ export default function Skills() {
 
   return (
     <div className={cl('skills')}>
-      <h2 tabIndex={0} className="mb_28">
+      <h2 tabIndex={0} className="mb_32">
         {t('headline')}
       </h2>
       {isDesktopScreen ? (

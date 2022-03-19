@@ -1,5 +1,9 @@
 .experience {
-  padding: 32px 0;
+  padding: 48px 0;
+
+  @media (min-width: 576px) {
+    padding: 72px 0;
+  }
 
   &__grid {
     display: grid;
