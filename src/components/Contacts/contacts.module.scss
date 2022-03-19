@@ -3,7 +3,7 @@
   height: 100%;
   padding: 8px 16px;
   background-color: #eee;
-  border-radius: 16px;
+  border-radius: 20px;
 
   &__list {
     display: flex;
@@ -28,4 +28,8 @@
     width: 30px;
     height: 30px;
   }
+}
+
+:global .dark-theme :local .contacts {
+  background-color: #d8d8d8;
 }
