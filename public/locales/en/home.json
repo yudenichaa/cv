@@ -30,7 +30,7 @@
         },
         "city": "Moscow",
         "period": "July 2021 — Current",
-        "description": "Product development for the Digital Financial Ecosystem."
+        "description": "Development of a digital financial ecosystem."
       },
       {
         "company": "Izzy Agency",
@@ -40,7 +40,7 @@
         },
         "city": "Krasnodar",
         "period": "January 2021 — July 2021",
-        "description": "Development of a B2B platform for the sale and transportation of goods."
+        "description": "Development of a B2B platform for cargo transportation."
       },
       {
         "company": "Magic Digital Agency",
@@ -91,7 +91,7 @@
             "text": "transaxio.pro",
             "url": "https://transaxio.pro"
           },
-          "description": "B2B platform for sale and transportation of goods."
+          "description": "B2B platform for cargo transportation."
         }
       ]
     },
